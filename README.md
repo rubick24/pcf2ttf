@@ -5,7 +5,7 @@
 下面是我使用文泉驿点阵宋体生成的 TTF 字体效果。
 实际字体大小为 15px（ascent=13, descent=2），行高为 18px。
 
-![example]('./assets/example.png')
+![example](./assets/example.png)
 
 `OpenType.js` 生成字体时如果字符过多（使用文泉驿点阵宋体，编码范围在 0-20000 或更多时），生成的 otf 文件会有错误，浏览器无法直接使用，且在 FontForge 中打开时报错：
 
