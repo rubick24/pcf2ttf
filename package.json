@@ -1,0 +1,9 @@
+{
+  "name": "pcf2ttf",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "license": "GPL",
+  "dependencies": {
+    "opentype.js": "^1.3.4"
+  }
+}
