@@ -176,19 +176,6 @@ export const loadPcf = async filePath => {
     const format = buffer.readInt32LE(start)
     const compressed = (format & formatEnum.PCF_COMPRESSED_METRICS) > 0
     const endian = (format & 0b1100) > 0 ? 'BE' : 'LE'
-    // if (compressed) {
-    //   const metrics_count = buffer['readInt16' + endian](start + 4)
-    //   const metrics = Array.from({ length: metrics_count }, (_, i) =>
-    //     parseMetricsData(true, endian, start + 6 + i * 12)
-    //   )
-    //   return { metrics_count, metrics }
-    // } else {
-    //   const metrics_count = buffer['readInt32' + endian](start + 4)
-    //   const metrics = Array.from({ length: metrics_count }, (_, i) =>
-    //     parseMetricsData(false, endian, start + 8 + i * 12)
-    //   )
-    //   return { metrics_count, metrics }
-    // }
     const metrics_count = buffer[`readInt${compressed ? 16 : 32}${endian}`](start + 4)
     const metrics = Array.from({ length: metrics_count }, (_, i) =>
       parseMetricsData(compressed, endian, start + (compressed ? 6 : 8) + i * (compressed ? 5 : 12))

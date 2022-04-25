@@ -144,7 +144,7 @@ console.info('before generate glyphs', performance.now())
 
 const glyphs = []
 const encodingTable = tables['PCF_BDF_ENCODINGS']
-for (let i = 0; i < 20000; i++) {
+for (let i = 0; i < encodingTable.glyphIndices.length; i++) {
   const v = encodingTable.glyphIndices[i]
   if (v < 0) {
     continue
@@ -160,10 +160,10 @@ for (let i = 0; i < 20000; i++) {
 
 console.info('before generate glyphs', performance.now())
 
-const accelerator = tables['PCF_ACCELERATORS']
 // const ascent = 11
 // const descent = 1
 // const fontHeight = 12
+const accelerator = tables['PCF_ACCELERATORS']
 const ascent = accelerator.fontAscent
 const descent = accelerator.fontDescent
 const fontHeight = ascent + descent
