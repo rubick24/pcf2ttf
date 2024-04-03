@@ -8,12 +8,19 @@
     <style>
       @font-face {
         font-family: MyPixelFont;
-        src: url('./MyPixelFont.ttf');
+        src: url('./myPixelFont.ttf');
       }
-      p {
+      @font-face {
+        font-family: MyPixelFont0;
+        src: url('./MyPixelFont0.ttf');
+      }
+      .a {
         font-family: MyPixelFont;
         margin: 0;
-        white-space: pre-wrap;
+      }
+      .b {
+        font-family: MyPixelFont0;
+        margin: 0;
       }
       .x1 {
         font-size: 15px;
@@ -24,15 +31,29 @@
     </style>
   </head>
   <body>
-    <p class="x1">1x:
-123456789
-ABCDEFGHIJKLMNOPQRSTUVWXYZ
-abcdefghijklmnopqrstuvwxyz
-我能吞下玻璃而不伤身体。</p>
-    <p class="x2">2x:
-123456789
-ABCDEFGHIJKLMNOPQRSTUVWXYZ
-abcdefghijklmnopqrstuvwxyz
-我能吞下玻璃而不伤身体。</p>
+    <p class="a x1">
+      1x: 0123456789<br />
+      ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+      abcdefghijklmnopqrstuvwxyz<br />
+      我能吞下玻璃而不伤身体。
+    </p>
+    <p class="a x2">
+      2x: 0123456789<br />
+      ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+      abcdefghijklmnopqrstuvwxyz<br />
+      我能吞下玻璃而不伤身体。
+    </p>
+    <p class="b x1">
+      1x: 0123456789<br />
+      ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+      abcdefghijklmnopqrstuvwxyz<br />
+      我能吞下玻璃而不伤身体。
+    </p>
+    <p class="b x2">
+      2x: 0123456789<br />
+      ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+      abcdefghijklmnopqrstuvwxyz<br />
+      我能吞下玻璃而不伤身体。
+    </p>
   </body>
 </html>
