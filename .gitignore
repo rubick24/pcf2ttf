@@ -12,3 +12,5 @@ venv/
 *.njsproj
 *.sln
 .DS_Store
+
+build/
