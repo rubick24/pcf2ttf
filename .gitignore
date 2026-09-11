@@ -11,3 +11,10 @@ yarn-error.log*
 *.njsproj
 *.sln
 .DS_Store
+
+# Compiled TypeScript (dist/ contains the original demo)
+build/
+*.tgz
+
+# Generated local preview artifacts
+/preview/
